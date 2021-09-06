@@ -4,6 +4,7 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import com.cos.blogtest.web.UserRepository;
 import com.cos.blogtest.web.dto.JoinReqDto;
@@ -29,7 +30,7 @@ public class UserController {
 		return "user/joinForm";
 	}
 	
-	@GetMapping("/join")
+	@PostMapping("/join")
 	public String join(JoinReqDto dto) {
 		userRepository.save(dto.toEntity());
 		return "redirect:/loginForm";
@@ -40,7 +41,7 @@ public class UserController {
 		return "user/loginForm";
 	}
 	
-	@GetMapping("/login")
+	@PostMapping("/login")
 	public String login(LoginReqDto dto) {
 		System.out.println(dto.getUsername());
 		System.out.println(dto.getPassword());
