@@ -18,7 +18,7 @@
 
 <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
   <!-- Brand -->
-  <a class="navbar-brand" href="#">블로그</a>
+  <a class="navbar-brand" href="/home">블로그</a>
 
   <!-- Links -->
   <ul class="navbar-nav">
@@ -32,7 +32,7 @@
 			<c:otherwise>
 				<li class="nav-item"><a class="nav-link" href="#">글쓰기</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">회원정보</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">로그아웃</a></li>
+				<li class="nav-item"><a class="nav-link" href="/logout">로그아웃</a></li>
 			</c:otherwise>
 		</c:choose>
 
